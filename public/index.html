@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CajaTiendita</title>
+    <link rel="stylesheet" href="9estilos.css">
+</head>
+<body>
+    <br>
+    <div>
+        <h3>Registro Productos</h3>
+    </div>
+    <br><br>
+    <div id="mensaje">
+            
+    </div>
+    <br><br>
+    <div id="modal">
+        <form id="productos">
+            <div>
+                <h4>Informacion Del Producto</h4>
+            </div>
+
+            <div class="contenedor">
+                <label for="nombre">Nombre del producto</label><br>
+                <input type="text" name="nombre" id="nombre" required><br><br>
+            </div>
+
+            <div class="contenedor">
+                <label for="precio">precio del producto</label><br>
+                <input type="number" name="precio" id="precio" min="10" step="10">
+                <label for="precio">pesos</label><br><br>
+            </div>
+
+            <div class="contenedor">
+                <label for="fecha">Fecha de compra</label><br>
+                <input type="date" name="fecha" id="fecha"><br><br>  
+            </div>
+            
+            <div class="contenedor">
+                <label for="tipo">Tipo de producto</label><br>
+                <select name="tipo" id="tipo">
+                    <option value="alimento">alimento</option>
+                    <option value="limpieza">limpieza</option>
+                    <option value="electrodomestico">electrodomestico</option>
+                    <option value="decorativo">decorativo</option>
+                  </select><br><br>
+            </div>
+
+            <div class="contenedor">
+                <label for="desc">Descripcion del producto</label><br>
+                <textarea name="desc" id="desc" cols="26" rows="4"></textarea>
+            </div>
+
+            <br>
+            <div class="contenedor">
+                <div id="fotico">
+
+                
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;" ></p>
+                <p><label for="file" style="cursor: pointer;">Subir imagen</label></p>
+                <p><img id="output" width="200" /></p>
+                
+                </div>
+            </div>
+            
+            <div class="contenedor">
+                <label for="prop">Propiedades del producto</label><br>
+                <select name="prop" id="prop">
+                    <option value="reciclable">reciclable</option>
+                    <option value="biodegradable">biodegradable</option>
+                    <option value="contaminante">contaminante</option>
+                                        
+                </select>
+            </div>
+            <br>
+            
+                <input type="submit" value="Agregar" id="guardar">
+            
+            
+    
+        </form>
+        
+    </div>
+    <br>
+
+    
+    <div id="listado">
+        <nav id="menu">
+            <input type="button" value="Agregar" id="btnAgrega">
+        </nav>
+    </div>
+
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Fecha de Compra</th>
+                <th>Tipo de Producto</th>
+                <th>Descripcion</th>
+                <th>imagen</th>
+                <th>Propiedades</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody id="datos">
+            </tbody>
+        </table>
+    
+
+    <script src="9funciones.js"></script>
+    <script src="9index.js"></script>
+</body>
+</html>
